@@ -1,6 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 
-
+/* Basic setup */
+/* Basic setup */
+body {
+    margin: 0; padding: 0; 
+    font-family: 'Open Sans', sans-serif;
+    
+    /* === ADD THESE BACKGROUND IMAGE PROPERTIES === */
+/* --- Background Image and Fix --- */
 body {
     margin: 0;
     padding: 0;
@@ -73,24 +80,34 @@ header h1 { font-size: 2.8em; font-weight: 700; color: white; margin-bottom: 5px
 }
 
 #advisory-table-wrapper {
-    /* 60% Width */
-    flex: 3; /* Table takes 3 parts */
-    min-width: 500px; /* Keep this to ensure table content doesn't break */
-    /* ... other styles ... */
+    /* === CHANGE: Table Width (approx 60% - flex: 3) === */
+    flex: 3; /* New Ratio: 3 parts for table */
+    min-width: 500px; 
+    background-color: #1a2f44;
+    padding: 15px;
+    border-radius: 5px;
 }
 
 #map-section {
-    /* 40% Width */
-    flex: 2; /* Map takes 2 parts (3 + 2 = 5 total parts; 2/5 = 40%) */
+    /* === CHANGE: Map Width (approx 40% - flex: 2) === */
+    flex: 2; /* New Ratio: 2 parts for map (3 + 2 = 5 total parts; 2/5 = 40%) */
     min-width: 250px;
-    /* ... other styles ... */
 }
 
 #advisory-map {
-    height: 650px; 
-    width: 100%; /* The map itself fills its 40% container */
-    /* ... other styles ... */
+    height: 650px; /* Retain increased height */
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #333;
+  
+/* === ADD SQUARE SHADOW === */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.9), 
+                0 0 40px rgba(0, 0, 0, 0.7); 
+    /* The first shadow is a tight, dark shadow for depth. */
+    /* The second shadow is a wider, softer shadow for glow/lift. */
+    /* Adjust the color and spread (last two values) to control the shadow's look. */
 }
+
 /* Table Styling (includes word-wrap and fixed layout) */
 #advisory-table table {
 width: 100%;
